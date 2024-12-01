@@ -1,7 +1,30 @@
 <main>
   <h1 class="text-3xl font-bold underline text-red-500">
-    Hello world!
+    Hello world! Im {{ title }}.
   </h1>
+  <app-tasks-list [tasks]="tasks"></app-tasks-list>
+  <h1>Angular Router App</h1>
+  <nav>
+    <ul>
+      <li>
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Home Component</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/product"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Product Component</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
 </main>
 
 <router-outlet />

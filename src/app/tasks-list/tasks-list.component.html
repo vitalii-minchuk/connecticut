@@ -1,0 +1,7 @@
+<button
+  *ngFor="let el of tasks"
+  (click)="toggle(el.name, $event)"
+  [class.line-through]="el.active"
+>
+  {{ el.name }}
+</button>
