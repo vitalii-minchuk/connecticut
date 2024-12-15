@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
-import { TasksListComponent } from './tasks-list/tasks-list.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 
 @Component({
@@ -9,7 +8,6 @@ import { HeaderComponent } from './components/layout/header/header.component';
   standalone: true,
   imports: [
     RouterOutlet,
-    TasksListComponent,
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
