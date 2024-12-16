@@ -1,7 +1,11 @@
 <p>user-list works!</p>
 
-@for (user of users; track $index) {
-<app-user-item (click)="selectUser(user.id)" />
+@for (user of users; track user.id) {
+<app-user-item
+  [username]="user.username"
+  [id]="user.id"
+  (onUserSelect)="onUserSelect($event)"
+/>
 } @if (selectedUser !== null) {
 <p>
   {{ "user" + selectedUser()?.username }}

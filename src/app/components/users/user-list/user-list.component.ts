@@ -14,7 +14,7 @@ export class UserListComponent {
   public users = users;
   public selectedUser: WritableSignal<User | null> = signal(null);
 
-  selectUser(id: string) {
+  onUserSelect(id: string) {
     const user = this.users.find((el) => el.id === id) ?? null;
     this.selectedUser.set(user);
   }
